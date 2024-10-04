@@ -7,11 +7,3 @@ Os dados são extraídos com uso de consultas DAX que são executas via REST API
 Como é uma REST API os dados retornados pelo DAX estão em formato JSON, e assim são gravados em uma pasta servindo como staging.
 
 Logo então os dados da pasta são lidos, tratados, formatados em JSON novamente para inserção no banco de dados Supabase.
-
-
-```mermaid
-graph TD;
-    Extraction-->Power BI Dataset;
-    Power BI Dataset-->JSON Files;
-    JSON Files-->Transform and Load-->Supabase Database;
-```
