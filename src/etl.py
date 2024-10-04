@@ -99,10 +99,10 @@ def run_transform_load():
             table = file.replace('.json', '')
 
             # Iniciando construtor da classe com as transformações
-            transform = Transform()
+            transform = Transform(table)
 
             # Transformando os dados (não terá tanta enfâse aqui por questões de segurança, para não expor os dados)
-            new_table = transform.exemplo_sua_transformacao(table)
+            new_table = transform.exemplo_sua_transformacao()
 
             # Imprimir para acompanhamento
             print(f'\nIniciando a carga da tabela {table}')
